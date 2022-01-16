@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Диаграммы Эйлера-Венна</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./base.js" charset="utf-8"></script>
+    <script src="./bunch_set.js" charset="utf-8"></script>
+    <script src="./bunch_operations.js" charset="utf-8"></script>
+    <script src="./parser.js" charset="utf-8"></script>
+    <script src="./floodTool.js" charset="utf-8"></script>
+    <script src="./bunch.js" charset="utf-8"></script>
+    <script src="./render.js" charset="utf-8"></script>
+    <style>
+      .error {
+        background-color: #fdd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Генератор диаграмм Эйлера-Венна</h1>
+    <h2>Синтаксис</h2>
+    <p>
+      <ul>
+        <li>Множества - A, B, C и D</li>
+        <li>Универсальное множество - E</li>
+        <li>Пересечение - n</li>
+        <li>Объединение - U</li>
+        <li>Разность - \</li>
+        <li>Симметрическая разность - d</li>
+        <li>Отрицание - воскл. знак (!) перед выражением</li>
+        <li>Выражения в круглых скобках выполняются в первую очередь; уровень вложения скобок неограничен</li>
+      </ul>
+    </p>
+    <hr>
+    <form class="" action="javascript:void(0);" method="get">
+      <label for="exp">Выражение: </label>
+      <input type="text" size="36" id="exp" name="exp" value="(B\C)UAU(D\C)U(BnD)">
+      <input type="submit" id="sub_exp" name="sub_exp" value="Сгенерировать">
+    </form>
+    <div class="result_wrapper">
+      <p>Результат: </p>
+      <canvas id="canv_result" width="360" height="200"></canvas>
+    </div>
+    <div class="error-wrapper">
+      <p>&nbsp;</p>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2022 Rishat D. Kagirov</p>
+    </footer>
+  </body>
+</html>
